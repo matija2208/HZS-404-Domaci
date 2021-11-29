@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+  background-image: url("../MEDIA/Pozadina.png");
+  font-family: 'Aleo', serif;
+}
+.onama-h1{
+text-align: center;
+color: #392F5A;
+font-size: 50px;/*
+font-family: 'Lobster', cursive;*/
+font-family: Montserrat,Georgia,serif
+
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.div-kartice {
+content: "";
+clear: both;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.ime{
+text-align: center;
+color: #d2cce9;
+font-size: 35px;
+font-weight: 100;
+font-family: 'Aleo', serif;
+}
+
+.skola{
+text-align: center;
+color: #d2cce9;
+font-size: 22px;
+}
+
+#avatar{
+height: 150px;
+width: 150px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+border: 5px solid #d2cce9;
+border-radius: 50%;
+margin-top: 10px;
+}
+
+.textcard{
+z-index: 1;
+color: #fff;
+}
+
+.okvir{
+position: relative;
+width: 300px;
+height: 400px;
+background: none;
+}
+
+.kartica{
+position: relative;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+transform-style: preserve-3d;
+transition: all 1s ease;
+}
+
+.kartica:hover{
+transform: rotateY(180deg);
+}
+
+.napred{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+backface-visibility: hidden;
+overflow: hidden;
+color: #000;
+}
+
+.napred{
+position: relative;
+width: 300px;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #C3BCDC;
+overflow: hidden;
+border-radius: 20px;
+}
+
+.napred::before{
+content: '';
+position: absolute;
+width: 150px;
+height: 140%;
+background: #ff8811;
+animation: animate 5s linear infinite;
+}
+
+.napred::after{
+content: '';
+position: absolute;
+inset: 4px;
+background: #392F5A;
+border-radius: 16px;
+}
+
+@keyframes animate {
+0%{
+  transform: rotate(0deg);
+}
+100%{
+  transform: rotate(360deg);
+}
+}
+
+.pozadi{
+position: absolute;
+top: 0;
+left: 0;
+backface-visibility: hidden;
+overflow: hidden;
+color: #fff;
+text-align: center;
+transform: rotateY(180deg);
+width: 300px;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #C3BCDC;
+border-radius: 20px;
+}
+
+.pozadi::before{
+content: '';
+position: absolute;
+width: 150px;
+height: 140%;
+background: rgb(255, 121, 12);
+animation: animate 5s linear infinite;
+}
+
+.pozadi::after{
+content: '';
+position: absolute;
+inset: 4px;
+background: #392F5A;
+border-radius: 16px;
+}
+
+.pozadi h2{
+color: #fff;
+font-size: 10em;
+z-index: 10;
+}
+
+.napred h1, .pozadi h1{
+font-family: 'zilla slab', sans-serif;
+padding: 30px;
+font-weight: bold;
+font-size: 24px;
+text-align: center;
+}
+
+.napred p, .pozadi p{
+font-family: 'zilla slab', sans-serif;
+padding: 30px;
+font-weight: normal;
+font-size: 12px;
+text-align: center;
+}
+
+.pozadina{
+  padding: 20px;
+  margin: 0 5%;
+  border-left: 10px solid #392F5A;
+  border-right: 10px solid #392F5A;
+}
+
+.text{
+  padding: 30px;
+  background: #8b0246/*#392F5A*/;
+  color: #fad4ab/*#FFEBD6*/;
+  font-size: 20px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  /*font-family: 'Oswald', sans-serif;*/
+  font-family: 'Average', serif;
+}
+
+.onama-ont{
+  font-family: 'Average', serif;
+  /*font-family: 'Lobster', cursive;
+  /*font-family: 'Aleo', serif;*/
+  color: #fad4ab/*#FFEBD6*/;
+  text-align: center;
+  font-size: 50px;
+}
+
+#linija{
+  height: 10px;
+  background: #392F5A;
+  margin-bottom: 15px;
+}

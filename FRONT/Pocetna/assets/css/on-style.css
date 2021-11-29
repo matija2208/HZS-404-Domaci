@@ -4,16 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
-body{
-  background-image: url("../MEDIA/Pozadina.png");
-  font-family: 'Aleo', serif;
+
+:root{
+  --PurpleMain: #8b0246;
+  --PurpleFaint: #dda5c1;
+  --WhiteMain:  #f7e4ed;
+  --PurpleRecipeCard: white;
 }
+
 .onama-h1{
 text-align: center;
-color: #8b0246/*#392F5A*/;
+color: white;
 font-size: 50px;/*
 font-family: 'Lobster', cursive;*/
-font-family: Montserrat,Georgia,serif
+font-family: Montserrat,Georgia,serif;
+padding: 20px;
+background-color: var(--PurpleMain);
+border: 5px solid var(--PurpleMain);
 
 }
 
@@ -35,16 +42,21 @@ justify-content: space-evenly;
 
 .ime{
 text-align: center;
-color: #d2cce9;
+color: var(--PurpleRecipeCard);
 font-size: 35px;
 font-weight: 100;
 font-family: 'Aleo', serif;
 }
 
+.pozadi_ime{
+  border-bottom: 5px solid white;
+ margin-top: 10px;
+ margin-bottom: 30px;
+ padding: 10px;
+}
 .skola{
-text-align: center;
-color: #d2cce9;
-font-size: 22px;
+color: var(--PurpleRecipeCard);
+font-size: 30px;
 }
 
 #avatar{
@@ -53,14 +65,13 @@ width: 150px;
 display: block;
 margin-left: auto;
 margin-right: auto;
-border: 5px solid #d2cce9;
+border: 5px solid white;
 border-radius: 50%;
 margin-top: 10px;
 }
 
 .textcard{
 z-index: 1;
-color: #fff;
 }
 
 .okvir{
@@ -104,7 +115,7 @@ height: 400px;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #C3BCDC;
+background: white;
 overflow: hidden;
 border-radius: 20px;
 }
@@ -122,7 +133,7 @@ animation: animate 5s linear infinite;
 content: '';
 position: absolute;
 inset: 4px;
-background: #8b0246/*#392F5A*/;
+background: var(--PurpleMain)/*#8b0246*/;
 border-radius: 16px;
 }
 
@@ -141,7 +152,6 @@ top: 0;
 left: 0;
 backface-visibility: hidden;
 overflow: hidden;
-color: #fff;
 text-align: center;
 transform: rotateY(180deg);
 width: 300px;
@@ -149,10 +159,13 @@ height: 400px;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #C3BCDC;
+background: white;
 border-radius: 20px;
+padding: 10px;
 }
-
+.textcard p{
+  font-size: 50px;
+}
 .pozadi::before{
 content: '';
 position: absolute;
@@ -166,13 +179,12 @@ animation: animate 5s linear infinite;
 content: '';
 position: absolute;
 inset: 4px;
-background: #392F5A;
+background: var(--PurpleMain);
 border-radius: 16px;
 }
 
 .pozadi h2{
-color: #fff;
-font-size: 10em;
+font-size: 45px;
 z-index: 10;
 }
 
@@ -195,14 +207,14 @@ text-align: center;
 .pozadina{
   padding: 20px;
   margin: 0 5%;
-  border-left: 10px solid #8b0246/*#392F5A*/;
-  border-right: 10px solid #8b0246/*#392F5A*/;
+  border-left: 10px solid var(--PurpleMain);
+  border-right: 10px solid var(--PurpleMain);
 }
 
 .text{
   padding: 30px;
-  background: #8b0246/*#392F5A*/;
-  color: #fad4ab/*#FFEBD6*/;
+  background: var(--PurpleMain);
+  color: white/*#FFEBD6*/;
   font-size: 20px;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
   /*font-family: 'Oswald', sans-serif;*/
@@ -216,13 +228,13 @@ text-align: center;
   font-family: 'Cinzel Decorative', cursive;
   /*font-family: 'Lobster', cursive;
   font-family: 'Aleo', serif;*/
-  color: #fad4ab/*#FFEBD6*/;
+  color: white/*#FFEBD6*/;
   text-align: center;
   font-size: 50px;
 }
 
 #linija{
   height: 10px;
-  background: #8b0246/*#392F5A*/;
+  background: var(--PurpleMain);
   margin-bottom: 15px;
 }

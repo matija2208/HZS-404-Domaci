@@ -20,12 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Main
---------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------*/
 #main {
-  margin-top: 60px;
-  padding: 20px 30px;
+  margin-top: 40px;
+  padding: 0px 30px;
   transition: all 0.3s;
 }
 @media (max-width: 1199px) {
@@ -210,15 +208,15 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.logo {
+/*.logo {
   line-height: 1;
-}
-@media (min-width: 1200px) {
+}*/
+@media (min-width: 12000px) {
   .logo {
     width: 280px;
   }
 }
-.logo img {
+/*.logo img {
   max-height: 26px;
   margin-right: 6px;
 }
@@ -227,20 +225,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: "Nunito", sans-serif;
 }
-
+*/
 .header {
   transition: all 0.5s;
   z-index: 997;
   height: 60px;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  /*box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);*/
   background-color: #8b0246/*#392F5A*/;
-  padding-left: 20px;
+  justify-content:center;
   /* Toggle Sidebar Button */
   /* Search Bar */
+  margin-left: 10px;
+  width: 60px;
 }
 .header .toggle-sidebar-btn {
   font-size: 32px;
-  padding-left: 10px;
   cursor: pointer;
   color: #fff;
 }
@@ -520,4 +519,160 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   transition: all 0.3s;
   border-top: 1px solid #8b0246;
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+:root{
+  --PurpleMain: #8b0246;
+  --PurpleFaint: #dda5c1;
+  --WhiteMain: #FFF8F0;
+  --PurpleRecipeCard: #E7E4F1;
+}
+
+
+.recepti{
+display: inline-block;
+margin: 0px 0px 100px 15px;
+height: 350px;
+width: 300px;
+} 
+
+.cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+padding: 5px;
+height: 420px;
+
+}
+
+.card-container {
+flex: 0 0 240px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+text-align: center;
+transition: transform 0.3s ease;
+}
+
+.DifficultyName{
+  position: relative;
+  display: inline-flex;
+  color: var(--PurpleMain);
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: 10%;
+  align-items: center;
+  text-align: center;
+}
+
+#CardDifficulty{
+  height: 20px;
+}
+
+.RecipeName{
+  padding-top: 10px;
+  position: relative;
+  display: inline-flex;
+  color: var(--WhiteMain);
+  font-size: 18px;
+  align-items: center;
+}
+
+.CircleUnRated{
+  display: inline-flex;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  left: -10px;
+  margin-top: 5px;
+
+  background: var(--PurpleFaint);
+  border: 2px solid var(--PurpleMain);
+  border-radius:50%;
+  box-sizing: border-box;
+}
+
+.CircleRated{
+  display: inline-flex;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  left: -10px;
+  margin-top: 5px;
+
+  background: var(--PurpleMain);
+  border: 2px solid var(--PurpleMain);
+  border-radius:50%;
+  box-sizing: border-box;
+}
+
+.ReceptImg{
+  background-image: url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 360px;
+  border-radius: 25px 0px 0px 0px;
+}
+
+#CardLower{
+  background-color: var(--PurpleMain);
+  border-radius: 0px 0px 25px 0px;
+  height: 40px;
+}
+
+#RecipeInfo{
+  background-color: var(--PurpleRecipeCard);
+  width:100%;
+  height:250px;
+  position:relative;
+  z-index: -5;
+}
+
+.RecipeText{
+  position: relative;
+  display: block;
+  color: var(--PurpleMain);
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  width:240px;
+  height:250px;
+}
+
+#RecipeInfoPad{
+  width: 100%;
+  height: 110px;
+  position:relative;
+  z-index: -5;
+
+}
+
+.CardAnimated{
+  transition: transform .666s;
+  transition-timing-function:cubic-bezier();
+}
+
+.card-container:hover .CardAnimated{
+  transform: translateY(250px);
+}
+
+
+
+
+
+.nav{
+  width: 60px;
+  height: 60px;
+  background-color: var(--PurpleMain);
 }

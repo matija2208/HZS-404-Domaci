@@ -1,7 +1,7 @@
-package com4.Baza.API;
+package API;
 
-import com4.Baza.MODEL.Post;
-import com4.Baza.SERVICE.PostService;
+import MODEL.Post;
+import SERVICE.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class PostControler {

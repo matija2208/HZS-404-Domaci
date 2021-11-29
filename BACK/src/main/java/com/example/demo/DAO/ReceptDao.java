@@ -1,7 +1,7 @@
-package com4.Baza.DAO;
+package DAO;
 
 import java.util.UUID;
-import com4.Baza.MODEL.Post;
+import MODEL.Post;
 
 public interface ReceptDao {
 

@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Comforter+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
 body{
   background-image: url("../MEDIA/Pozadina.png");
   font-family: 'Aleo', serif;
 }
 .onama-h1{
 text-align: center;
-color: #392F5A;
+color: #8b0246/*#392F5A*/;
 font-size: 50px;/*
 font-family: 'Lobster', cursive;*/
 font-family: Montserrat,Georgia,serif
@@ -119,7 +122,7 @@ animation: animate 5s linear infinite;
 content: '';
 position: absolute;
 inset: 4px;
-background: #392F5A;
+background: #8b0246/*#392F5A*/;
 border-radius: 16px;
 }
 
@@ -192,8 +195,8 @@ text-align: center;
 .pozadina{
   padding: 20px;
   margin: 0 5%;
-  border-left: 10px solid #392F5A;
-  border-right: 10px solid #392F5A;
+  border-left: 10px solid #8b0246/*#392F5A*/;
+  border-right: 10px solid #8b0246/*#392F5A*/;
 }
 
 .text{
@@ -207,9 +210,12 @@ text-align: center;
 }
 
 .onama-ont{
-  font-family: 'Average', serif;
+  /*font-family: 'Average', serif;
+  font-family: 'Playball', cursive;
+  font-family: 'Sail', cursive;*/
+  font-family: 'Cinzel Decorative', cursive;
   /*font-family: 'Lobster', cursive;
-  /*font-family: 'Aleo', serif;*/
+  font-family: 'Aleo', serif;*/
   color: #fad4ab/*#FFEBD6*/;
   text-align: center;
   font-size: 50px;
@@ -217,6 +223,6 @@ text-align: center;
 
 #linija{
   height: 10px;
-  background: #392F5A;
+  background: #8b0246/*#392F5A*/;
   margin-bottom: 15px;
 }

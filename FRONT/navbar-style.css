@@ -1,0 +1,17 @@
+#navbar{
+    float: left;
+    width: 15%;
+}
+#glavno{
+    float: right;
+}
+.blok{
+    background: #8b0246/*#392F5A*/;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.linija{
+    height: 10px;
+    background: #8b0246/*#392F5A*/;
+    margin-bottom: 15px;
+}

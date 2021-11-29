@@ -1,7 +1,7 @@
-package com4.Baza.SERVICE;
+package SERVICE;
 
-import com4.Baza.DAO.ReceptDao;
-import com4.Baza.MODEL.Post;
+import DAO.ReceptDao;
+import MODEL.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

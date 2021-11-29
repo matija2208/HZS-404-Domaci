@@ -1,4 +1,4 @@
-package com4.Baza.MODEL;
+package MODEL;
 
 import java.util.UUID;
 

@@ -1,6 +1,6 @@
-package com4.Baza.DAO;
+package DAO;
 
-import com4.Baza.MODEL.Post;
+import MODEL.Post;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

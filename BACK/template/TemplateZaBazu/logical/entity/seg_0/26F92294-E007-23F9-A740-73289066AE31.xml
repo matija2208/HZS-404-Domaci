@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="26F92294-E007-23F9-A740-73289066AE31" name="Korisnik">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:43:35 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDkorisnika" id="AB9BB195-A5D9-AE23-4CA5-0E5A51D0237F">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:43:45 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ime" id="F966E8BB-1842-953A-8A8C-0484459FD26F">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:44:00 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Prezime" id="EEC8B04B-0A4B-C64A-8464-90899126E3B0">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:44:11 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="4BA2938E-3863-4BD8-B52E-803D8358A641">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:44:27 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sifra" id="21B89F02-D039-6303-4519-CC3DF1455E29">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:44:57 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="37A34541-209E-DABC-63BF-AB9145C0BAC7" name="Korisnik PK">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:43:59 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AB9BB195-A5D9-AE23-4CA5-0E5A51D0237F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

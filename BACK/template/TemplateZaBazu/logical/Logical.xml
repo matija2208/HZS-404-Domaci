@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="30F42727-C948-D592-47EA-46140ED7D128" mainViewID="B8862330-2496-53A0-2691-2F49C4FDD45E">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:32:56 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1FFC56E0-0677-F3F5-4440-C69DB68D9E29" name="Sastojci">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:39:12 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDsastojka" id="52F7FBC5-BEDA-3CEA-59B8-C4249606FBF4">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:39:22 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ImeSastojka" id="C32FA016-CC5A-95A2-C666-89F0895BAC92">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:39:38 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kolicina" id="27D02636-F11B-35B8-5D82-1E756E813F06">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:39:57 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDposta" id="1A3F442D-E0BF-268D-13E5-C17A2F7F6F92">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:40:34 UTC</createdTime>
+<generatorID>FA218A3B-B264-B03B-89F1-0426FAECF62D</generatorID>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<referedAttribute>7C07E2C1-615A-E7C1-76B8-F896494853BA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BBAC6FF8-3B87-2BA3-D291-3756211E40B0" name="Sastojci PK">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:39:37 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>52F7FBC5-BEDA-3CEA-59B8-C4249606FBF4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

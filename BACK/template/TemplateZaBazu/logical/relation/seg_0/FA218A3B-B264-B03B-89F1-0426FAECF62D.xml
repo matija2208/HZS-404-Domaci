@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_2" directorySegmentName="seg_0" id="FA218A3B-B264-B03B-89F1-0426FAECF62D">
+<createdBy>matij</createdBy>
+<createdTime>2021-11-29 18:40:34 UTC</createdTime>
+<ownerDesignName>TemplateZaBazu</ownerDesignName>
+<engineerTo>
+<item key="0626903E-E8C0-B01F-C421-CFB93BC5EFA1" value="true"/>
+</engineerTo>
+<sourcePk>1145368A-F194-5589-45F6-0EFDEDD9FD14</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>46087504-279B-55BF-B0FA-C3AF46CA50C8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1FFC56E0-0677-F3F5-4440-C69DB68D9E29</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

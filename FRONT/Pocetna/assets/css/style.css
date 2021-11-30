@@ -559,6 +559,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 
+position: relative;
 text-align: center;
 transition: transform 0.3s ease;
 }
@@ -633,7 +634,6 @@ transition: transform 0.3s ease;
   background-color: var(--PurpleRecipeCard);
   width:100%;
   height:250px;
-  position:relative;
   z-index: -5;
 }
 
@@ -653,23 +653,24 @@ transition: transform 0.3s ease;
 #RecipeInfoPad{
   width: 100%;
   height: 110px;
-  position:relative;
-  z-index: -5;
-
 }
 
 .CardAnimated{
   transition: transform .666s;
-  transition-timing-function:cubic-bezier();
+  position:relative;
 }
 
 .card-container:hover .CardAnimated{
   transform: translateY(250px);
 }
 
+.card-container:hover{
+  z-index: 1000;
+}
 
-
-
+.card-container:hover #CardDifficulty{
+  visibility: hidden;
+}
 
 .nav{
   width: 60px;

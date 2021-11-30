@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD 404! - Login</title>
+    <link rel="stylesheet" href=".//assets/css/Log-style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+    <div class="log-box">
+        <div class='signup'>
+            <br>
+          <img src="../Pocetna/assets/img/404foodlogoWhite.png" width="30%" height="30%">
+          <h1 class="sing_h1">REGISTRUJ SE</h1><br>
+           <form id="forma">
+             <!-- IME-->
+            <input type='text' id="ime_input" placeholder='Ime:'  />
+            <p class="regex_error hidden" id="ime_error">Ime sme sadrzati samo slova.</p>
+
+            <!-- PREZIME-->
+            <input type='text' id="prezime_input" placeholder='Prezime:'  />
+            <p class="regex_error hidden" id="prezime_error">Prezime sme sadrzati samo slova.</p>
+
+            <!-- MAIL-->
+            <input type='text' id="mail_input" placeholder='Email:'  />
+            <p class="regex_error hidden" id="mail_error">E-Mail adresa mora sadrzati validnu adresu (example@[mail].com)</p>
+
+            <!-- PASS-->
+            <input type='password' id="pass_input" placeholder='Lozinka:'  />
+            <p class="regex_error hidden" id="pass_error">Lozinka mora sadrzati vise od 6 slova i mora sadrzati barem jedan broj i jedno slovo.</p>
+
+            <input type='password' id="pass_repeat" placeholder='Potvrdi lozinku:'  />
+            <p class="regex_error hidden" id="pass_repeat_error">Lozinke nisu iste.</p>
+
+            <!-- TELEFON-->
+            <input type='text' id="tel_input" placeholder='Telefon:'  />
+            <p class="regex_error hidden" id="tel_error">Broj telefona mora biti spojeni niz koji sadrzi samo brojeve (npr. 0631234567).</p>
+
+            <input class="dugme" type='button' value="REGISTRUJ SE" id="dodajobjavu" onclick="validiraj()" /><br><br>
+            <a href="../Pocetna/Login.html"><button class="dugme1" >PRIJAVI SE</button></a>
+            <a href="../front/bootstrap/index2.html"><button class="dugme" ><i class="fas fa-reply"></i> NAZAD</button></a><br><br>
+           </form>
+        </div>
+      </div>
+
+      <!--SCRIPT IMPORT-->
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="Registrujse.js"></script>
+</body>
+</html>

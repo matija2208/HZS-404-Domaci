@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
+
 }
 .back-to-top i {
   font-size: 24px;
@@ -237,6 +238,8 @@ h1, h2, h3, h4, h5, h6 {
   /* Search Bar */
   margin-left: 10px;
   width: 60px;
+  border-radius: 10%;
+border: 5px solid white;
 }
 .header .toggle-sidebar-btn {
   font-size: 32px;

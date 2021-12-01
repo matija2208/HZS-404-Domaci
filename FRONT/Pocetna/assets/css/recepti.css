@@ -1,0 +1,54 @@
+:root{
+    --PurpleMain: #8b0246;
+    --PurpleFaint: #dda5c1;
+    --WhiteMain:  #f7e4ed;
+    --PurpleRecipeCard: white;
+  }
+.pozadina{
+    width: 100;
+    background-color: var(--PurpleMain);
+    border: 5px solid white ;
+    border-radius: 30px;
+    margin-top: 60px;
+}
+.slika{
+    margin: 20px;
+    width: 70%;
+    height: 200px;
+   
+    border: 5px solid white ;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.prostor{
+    display: initial;
+}
+.opis{
+    color: white;
+    width: 80%;
+
+}
+.sastojci{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.lista_sastojaka{
+    color: white;
+    font-size: 20px;
+}
+.recept{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.priprema{
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

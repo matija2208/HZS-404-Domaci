@@ -24,6 +24,8 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <link href="assets/css/styleup.css" rel="stylesheet">
+  <link href="assets/css/mobile-style.css" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/on-style.css">
   <link rel="stylesheet" href="style.css">
@@ -193,6 +195,11 @@
                 <input class="formInput" id="tagovi_jela_input" type="text" placeholder="Tagovi recepta za pretragu (npr. 'doručak,posno,vegansko'...):" />
                 <span class="RegexWarning d-none" id="TagWarning"> Tagovi smeju samo sadržati slova, probajte ponovo. </span>
                 <span class="RegexWarning d-none" id="EmptyTagsWarning"> Polje za tagove objave ne sme biti prazan. </span>
+                <br><br>
+                <div class="dropzone">
+                  <div class="info"></div>
+                </div>
+                
             </div>
             <div class="linija"></div>
             <div class="formsubmit" id="submitDiv">
@@ -221,7 +228,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/imgur.js"></script>
   <script src="assets/js/ObjaviRecept.js"></script>
+
+  
+  <!--<script src="assets/js/upload.js"></script>-->
 
 </body>
 

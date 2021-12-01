@@ -89,42 +89,6 @@ function validiraj(){
       document.getElementById("LinkWarning").classList.add("d-none");
     }
   }
-
-  function objavi_post(){
-
-    var entries = document.getElementById("forma");
-    var ime = entries.ime_jela_input.value;
-    var opis = entries.opis_jela_input.value;
-    var sastojci = entries.sastojci_jela_input.value.split(",");
-    var vreme = entries.vreme_jela_input.value;
-    var imgLink = entries.link_jela_input.value;
-    var tagovi = entries.tagovi_jela_input.value.split(",");
-
-    for (var i = 0, len = sastojci.length; i < len; i++) {
-      sastojci[i] = sastojci[i].trim();
-    }
-
-    for (var i = 0, len = tagovi.length; i < len; i++) {
-      tagovi[i] = tagovi[i].trim();
-    }
-
-    var tezina = document.querySelector('input[name="tezina"]:checked').value;
-    switch(tezina){
-      case "Složeno":
-        tezina = 3;
-      break;
-      
-      case "Srednje":
-        tezina = 2;
-      break;
-
-      case "Prosto":
-        tezina = 1;
-      break;
-    }
-
-    console.log("tadaa");
-  }
   
   /*Upload.js*/
   var link;
@@ -161,4 +125,71 @@ new Imgur({
     clientid: 'a08fd223eb9d597', //You can change this ClientID
     callback: feedback
 });
- 
+
+//Punjenje baze
+
+async function objavi_post(){
+
+  var entries = document.getElementById("forma");
+  var ime = entries.ime_jela_input.value;
+  var opis = entries.opis_jela_input.value;
+  var sastojci = entries.sastojci_jela_input.value.split(",");
+  var vreme = entries.vreme_jela_input.value;
+  var imgLink = entries.link_jela_input.value;
+  var tagovi = entries.tagovi_jela_input.value.split(",");
+  var listaSastojaka=[Object];
+
+  for (var i = 0, len = sastojci.length; i < len; i++) {
+    sastojci[i] = sastojci[i].trim();
+    var x=sastojci[i].split(' ');
+    x[0]=x[0].trim();
+    x[1]=x[1].trim();
+    listaSastojaka[i]={
+      imeSastojka:x[1],
+      kolicinaSastojka:x[0],
+    };
+  }
+
+  for (var i = 0, len = tagovi.length; i < len; i++) {
+    tagovi[i] = tagovi[i].trim();
+  }
+
+  var tezina = document.querySelector('input[name="tezina"]:checked').value;
+  switch(tezina){
+    case "Složeno":
+      tezina = 3;
+    break;
+    
+    case "Srednje":
+      tezina = 2;
+    break;
+
+    case "Prosto":
+      tezina = 1;
+    break;
+  }
+
+  var newPost={
+    imeJela:ime,
+    vremeSpremanja:vreme,
+    recept:opis,
+    tezinaSpremanja:tezina,
+    vidljivost:false,
+    urlSlike:link,
+
+    potrebniSastojci:listaSastojaka,
+    tagovi:tagovi
+  };
+
+  console.log(newPost);
+
+  try{
+    var x = await axios.post("http://localhost:3000/api/posts",newPost);
+    console.log(x);
+  }
+  catch(err){
+    console.log(err);
+  }
+  alert("Post vam je uspesno objavljen.");
+  window.location.href = "Pocetna.html";
+}

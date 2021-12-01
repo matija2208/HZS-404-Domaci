@@ -19,6 +19,11 @@ const PostSchema=new mongoose.Schema({
         trim:true,
         required:true,
     },
+    slika:{
+        type:String,
+        trim:true,
+        required:true,
+    },
     vremeSpremanja:{
         type:String,
         trim:true,
@@ -37,9 +42,7 @@ const PostSchema=new mongoose.Schema({
         type:Boolean,
         required:true,
     },
-    urlSlike:{
-        type:String,
-    },
+    
     
     potrebniSastojci:[PotrebniSastojciSchema],
     tagovi:[{type:String,trim:true,required:true}],

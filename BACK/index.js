@@ -32,6 +32,22 @@ app.get("/api/posts", async function(req,res){
     }
 });
 
+app.get("/api/posts/:id", async function(req,res){
+    try{
+        const postId = req.params.id;
+        const Post = await post.findById(postId);
+        res.json({
+            post:Post
+        });
+    }
+    catch(err){
+        res.send({
+            uspesnost:false,
+            poruka:err.message
+        });
+    }
+});
+
 app.post("/api/posts/", async function(req,res){
     try{
 
@@ -41,6 +57,7 @@ app.post("/api/posts/", async function(req,res){
             recept:req.body.recept,
             tezinaSpremanja:req.body.tezinaSpremanja,
             vidljivost:req.body.vidljivost,
+            slika:req.body.slika,
 
             potrebniSastojci:req.body.potrebniSastojci,
             
@@ -90,6 +107,7 @@ app.put("/api/posts/:id", async function(req,res){
         newPost.recept=req.body.recept;
         newPost.tezinaSpremanja=req.body.tezinaSpremanja;
         newPost.vidljivost=req.body.vidljivost;
+        newPost.slika=req.body.slika;
 
         newPost.potrebniSastojci=req.body.potrebniSastojci;
         newPost.tagovi=req.body.tagovi;

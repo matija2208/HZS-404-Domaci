@@ -70,12 +70,12 @@
           <span>RECEPTI</span>
         </a>
         <ul id="nav-link">
-          <a href="#">> SLATKO</a><br>
-          <a href="#">> SLANO</a><br>
-          <a href="#">> DORUČAK</a><br>
-          <a href="#">> RUČAK</a><br>
-          <a href="#">> VEČERA</a><br>
-          <a href="#">> IZNENADI</a><br>
+          <a href="#" onclick="GetData('SLATKO')">> SLATKO</a><br>
+          <a href="#" onclick="GetData('SLANO')">> SLANO</a><br>
+          <a href="#" onclick="GetData('DORUCAK')">> DORUČAK</a><br>
+          <a href="#" onclick="GetData('RUCAK')">> RUČAK</a><br>
+          <a href="#" onclick="GetData('VECERA')">> VEČERA</a><br>
+          <a href="#" onclick="GetData('IZNENADI')">> IZNENADI</a><br>
         </ul>
       </li>
 
@@ -150,28 +150,11 @@
   </aside>
  </header>
   <main id="main" class="main">
-      <section class="objave">
-            <div class="cards">
-                <div class="card-container" id="1234567890" onclick="GoToRecipe(this.id)">
-                    <div class="ReceptImg">   
-                        <div id="RecipeInfoPad" class="CardAnimated"></div>
-                        <div id="RecipeInfo" class="CardAnimated">
-                            <span class="RecipeText"> AAAAAAAAAAAAAAAAAAAAAAAAAAA</span>
-                        </div>
-                    </div>
-                    <div id="CardLower" class = "CardAnimated">
-                            <span class="RecipeName">RECIPE NAME</span>
-                        
-                    </div>
-                    <div id = "CardDifficulty" class = "CardAnimated">
-                        <span id="Circle1" class="CircleRated"></span>
-                        <span id="Circle2" class="CircleRated"></span>
-                        <span id="Circle3" class="CircleRated"></span>
-                        <span class="DifficultyName">DIFF NAME</span>
-                    </div>
-                </div> 
-            </div>
-        </section>
+    <section class="objave">
+      <div class="cards">
+                
+      </div>
+    </section>
   </main>
 
   <footer id="footer" class="footer">
@@ -191,6 +174,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/CardToRecipe.js"></script>
 

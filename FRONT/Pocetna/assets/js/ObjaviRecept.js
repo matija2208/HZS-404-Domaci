@@ -114,7 +114,6 @@ async function objavi_post(){
   var opis = entries.opis_jela_input.value;
   var sastojci = entries.sastojci_jela_input.value.split(",");
   var vreme = entries.vreme_jela_input.value;
-  var imgLink = entries.link_jela_input.value;
   var tagovi = entries.tagovi_jela_input.value.split(",");
   var listaSastojaka=[Object];
 
@@ -154,7 +153,7 @@ async function objavi_post(){
     recept:opis,
     tezinaSpremanja:tezina,
     vidljivost:false,
-    urlSlike:link,
+    slika:link,
 
     potrebniSastojci:listaSastojaka,
     tagovi:tagovi
@@ -170,5 +169,5 @@ async function objavi_post(){
     console.log(err);
   }
   alert("Post vam je uspesno objavljen.");
-  window.location.href = "Pocetna.html";
+  //window.location.href = "Pocetna.html";
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FOOD 404! - Računanje kalorija</title>
+        <link rel="stylesheet" href="assets/css/Kalorije-style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    </head>
+    <body>
+        <div class="log-box">
+            <div class='signup'>
+                <br>
+                <img src="../Pocetna/assets/img/404foodlogoWhite.png" width="30%" height="30%"> 
+                <form>
+                    <!--Za žene: 655+(9,6*kilaža)+(1,8*visina)-(4,7*godine)=BMR
+                        Za muškarce: 66+ (13,7*kilaža)+(5*visina)-(6,8*godine)=BMR-->
+                  <h1 class="sing_h1">Izračunajte koliko kalorija možete da unesete dnevno!</h1><br>
+                  <select name="pol" id="pol">
+                    <option value="zenski">Ženski</option>
+                    <option value="muski">Muški</option>
+                  </select><br>
+                  <input id="visina" type='text' placeholder='Vaša visina'/>
+                  <input id="kilaza" type='text' placeholder='Vaša telesna masa'/>
+                  <input id="godine" type='text' placeholder='Vaše godine'/><br>
+                  <br><br>
+                  <button id="kalorije" disabled> X </button><br><br>
+                  <input class="dugme" id="izracunajte" type='button' value="Izračunajte" onclick="izracunaj()"/><br><br><br>
+                  <a href="Pocetna.html" id="dugmenazad"><i class="fas fa-reply"></i> NAZAD</a><br><br><br>
+                </form>
+             </div>
+        </div>
+        <script src="assets/js/kalorije-script.js"></script>
+    </body> 
+</html>    

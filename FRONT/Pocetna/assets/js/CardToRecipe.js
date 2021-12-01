@@ -47,7 +47,7 @@ function CreateCard(post) {
 
     let card = `
     <div class="card-container" id="${post._id}" onclick="GoToRecipe(this.id)">
-        <div style="background-image: url(${post.slika}); background-repeat: no-repeat; background-size: contain; height: 360px; border-radius: 25px 0px 0px 0px;">
+        <div style="background-image: url(${post.slika}); background-repeat: no-repeat; background-position: center; background-size: cover; height: 360px; border-radius: 25px 0px 0px 0px;">
            
             <div id="RecipeInfoPad" class="CardAnimated"></div>
             <div id="RecipeInfo" class="CardAnimated">

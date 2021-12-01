@@ -440,9 +440,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 15px;
   border-radius: 4px;
 }*/
-.sidebar-nav .nav-link i {
+.sidebar-nav .nav-link {
   font-size: 16px;
   margin-right: 10px;
+}
+.sidebar-nav #nav-link{
+  font-size: 16px;
+  margin-right: 0 10px;
+
 }/*
 .sidebar-nav .nav-link.collapsed {
   color: #012970;
@@ -802,4 +807,23 @@ transition: transform 0.3s ease;
   overflow-wrap: break-word;
   overflow-y: auto;
   max-height: 600px;
+}
+#drustvene_mreze{
+  margin-left: 10px;
+}
+.drustvene_mreze{
+  color: white;
+  border: 2px solid white;
+  width: 65px;
+  border-radius: 5%;
+  float: left;
+  margin: 5px;
+}
+.drustvene_mreze:hover{
+  color: var(--PurpleMain);
+  background-color: white;
+  border: 2px solid white;
+}
+.dm:hover{
+  color: var(--PurpleMain);
 }

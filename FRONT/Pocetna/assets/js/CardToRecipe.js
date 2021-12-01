@@ -3,7 +3,6 @@ GetData();
 var destination = "Recept_stranica.html"
 var counter=0;
 var IDs=[String];
-var counter=0;
 var POSTS=[Object];
 let Posts=[Object];
 
@@ -47,7 +46,7 @@ function CreateCard(post) {
     }
 
     let card = `
-    <div class="card-container" id="${counter}" onclick="GoToRecipe(this.id)">
+    <div class="card-container" id="${post._id}" onclick="GoToRecipe(this.id)">
         <div style="background-image: url(${post.slika}); background-repeat: no-repeat; background-size: contain; height: 360px; border-radius: 25px 0px 0px 0px;">
            
             <div id="RecipeInfoPad" class="CardAnimated"></div>
@@ -66,7 +65,6 @@ function CreateCard(post) {
     </div> 
 
     `;
-    counter++;
     return card;
 }
 
@@ -74,8 +72,10 @@ function RenderPosts(posts, tag="") {
     const cardsDiv = document.querySelector(".cards");
     let cards = "";
     Posts=[Object];
+    var counter=0;
     posts.forEach(function(post){
         Posts.push(post);
+        counter++;
     });
     console.log(Posts);
 
@@ -85,9 +85,17 @@ function RenderPosts(posts, tag="") {
         {
             cards+=CreateCard(Posts[i])
         }
+        else if(tag==="IZNENADI")
+        {
+            var index=Math.floor(Math.random()*counter);
+            console.log(index);
+
+            cards+=CreateCard(Posts[index+1]);
+            break;
+        }
         else
         {
-            for(var j = 1; j < Posts[i].tagovi.length; j++)
+            for(var j = 0; j < Posts[i].tagovi.length; j++)
             {
                 if(Posts[i].tagovi[j]===tag)
                 {
@@ -96,7 +104,6 @@ function RenderPosts(posts, tag="") {
             }
         }
     }
-    counter=0;
     cardsDiv.innerHTML="";
     cardsDiv.innerHTML = cards;
 }

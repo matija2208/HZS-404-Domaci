@@ -169,5 +169,5 @@ async function objavi_post(){
     console.log(err);
   }
   alert("Post vam je uspesno objavljen.");
-  //window.location.href = "Pocetna.html";
+  window.location.href = "Pocetna.html";
 }

@@ -1,4 +1,4 @@
-var ID=0;
+var ID="";
 var POSTS=[Object];
 
 function takeID(){
@@ -39,36 +39,30 @@ function putData(post)
 
 async function GetData() {
     try {
-        var pOSTS = await axios.get("http://localhost:3000/api/posts");
-        putData(pOSTS.data.posts[ID]);
+        var pOSTS = await axios.get("http://localhost:3000/api/posts/"+ID);
+        console.log(pOSTS.data.posts[0]);
+        putData(pOSTS.data.posts[0]);
     }catch (err) {
         console.log(err);
     }
 }
 
-async function obrisi(id)
+async function obrisi()
 {
     var loz = prompt("Unesite lozinku za objavu : ");
     if(loz==="JOSHUA")
     {
-        try {
-            var posts = await axios.get("http://localhost:3000/api/posts");
-
-            let idstring=`http://localhost:3000/api/posts/`+(posts.data.posts[id]._id);
-            try{
-                const res = await axios.delete(idstring);
-                console.log(res);
-                counter=0;
-                location.href="Recepti.html";
-            }
-            catch(err)
-            {
-                console.log(err);
-            }
-        }catch (err) {
+        var id = location.search.substring(1);
+        let idstring="http://localhost:3000/api/posts/"+id;
+        console.log(idstring);
+        try{
+            await axios.delete(idstring);
+            location.href="Recepti.html";
+        }
+        catch(err)
+        {
             console.log(err);
         }
-        
     }
 }
 

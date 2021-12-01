@@ -161,7 +161,9 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
   }
 }
-
+.objava{
+  display: inline;
+}
 /* Card */
 .card {
   margin-bottom: 30px;
@@ -169,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
   overflow: hidden;
+  display: flex;
 }
 
 .card-title {
@@ -409,7 +412,11 @@ h1, h2, h3, h4, h5, h6 {
     left: -300px;
   }
 }
-
+.centar{
+  align-items: center;
+  justify-content: center;
+  margin-left: 20%;
+}
 .sidebar-nav {
   padding: 0;
   margin: 0;
@@ -421,6 +428,9 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 .sidebar-nav .nav-item {
+  margin-bottom: 0px;
+}
+#nav-item{
   margin-bottom: 5px;
 }
 .sidebar-nav .nav-heading {
@@ -553,14 +563,26 @@ margin: 0px 0px 100px 15px;
 height: 350px;
 width: 300px;
 } 
-
+.objave{
+  margin-top: 40px;
+  display: inline-flex;
+ 
+  position: relative;
+}
 .cards {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-evenly;
+/*justify-content: space-evenly;*/
 padding: 5px;
 height: 420px;
 
+flex: 0 0 240px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+position: relative;
+text-align: center;
 }
 
 .card-container {
@@ -568,7 +590,7 @@ flex: 0 0 240px;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-
+margin: 20px;
 position: relative;
 text-align: center;
 transition: transform 0.3s ease;
@@ -810,6 +832,11 @@ transition: transform 0.3s ease;
 }
 #drustvene_mreze{
   margin-left: 10px;
+}
+#drustvene_mreze2{
+  margin-right: 10px;
+  
+ 
 }
 .drustvene_mreze{
   color: white;

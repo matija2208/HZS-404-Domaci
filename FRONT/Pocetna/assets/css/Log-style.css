@@ -110,7 +110,25 @@ body{
     font-size: 1em;
     background-color:var(--PurpleMain);
     border: 2px dashed white;
+    padding: 1%;
+    text-decoration: none;
   }
   .dugme1:hover{
     background-color: #6e073a;
   } 
+#dugmenazad{
+  margin-top: 25px;
+  width: 50%;
+  border: 0;
+  background-color:white;
+  border-radius: 5px;
+  height: 50px;
+  color: var(--PurpleMain);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  padding: 1%;
+}
+#dugmenazad:hover{
+  background-color: var(--WhiteMain);
+}

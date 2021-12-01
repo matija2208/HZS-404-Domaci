@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   height: 60px;
   /*box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);*/
-  background-color: #8b0246/*#392F5A*/;
+  background-color:  #2f2f2f/*#392F5A*/;
   justify-content:center;
   /* Toggle Sidebar Button */
   /* Search Bar */
@@ -690,12 +690,7 @@ transition: transform 0.3s ease;
     #2f2f2f
     /*#690023*/;
   }
-  .header{
-    background-color: /*#0F7D8C*/
-    /*#9F3168*/
-    #2f2f2f
-    /*#690023*/;
-  }
+
 }
 
 

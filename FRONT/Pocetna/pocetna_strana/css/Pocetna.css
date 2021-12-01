@@ -1,0 +1,279 @@
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2;
+  color: #5e493a;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: #000;
+  }
+  a {
+    color: #fb6e14;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  a:hover, a:focus, a:active {
+    color: #bf4c03;
+  }
+  #fh5co-container {
+    position: relative;
+    z-index: 10;
+  }
+  #fh5co-offcanvas, #fh5co-container, .fh5co-nav-toggle, #fh5co-footer {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  #fh5co-container, .fh5co-nav-toggle, #fh5co-footer {
+    z-index: 2;
+    position: relative;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-container, #fh5co-footer, .fh5co-nav-toggle {
+      -moz-transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  .offcanvas-visible #fh5co-container, .offcanvas-visible #fh5co-footer, .offcanvas-visible .fh5co-nav-toggle {
+    -moz-transform: translateX(275px);
+    -webkit-transform: translateX(275px);
+    -ms-transform: translateX(275px);
+    -o-transform: translateX(275px);
+    transform: translateX(275px);
+  }
+  #fh5co-home {
+    min-height: 700px;
+    background: #fff url(../images/loader.gif) no-repeat center center;
+  }
+  #fh5co-home .flexslider {
+    border: none;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+  #fh5co-home .flexslider .fh5co-text {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 50%;
+    margin-top: -212px;
+    text-align: center;
+  }
+  #fh5co-home .flexslider .fh5co-text h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 300px;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  @media screen and (max-width: 992px) {
+    #fh5co-home .flexslider .fh5co-text h1 {
+      font-size: 100px;
+    }
+  }
+  #fh5co-home .flexslider .fh5co-text h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-home .flexslider .fh5co-text h2 {
+      font-size: 20px;
+    }
+  }
+  #fh5co-home .flexslider .fh5co-text h2 span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    text-transform: none;
+  }
+  #fh5co-home .flexslider .fh5co-text h2 a {
+    color: #fb6e14;
+  }
+  #fh5co-home .flexslider .slides li {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #fh5co-home .flexslider .fh5co-overlay {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .5;
+    background: #000;
+  }
+  #fh5co-home .flexslider .flex-control-nav,
+  #fh5co-home .flexslider .flex-direction-nav {
+    display: none;
+  }
+
+  #fh5co-sayings .flexslider .slides li {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  #fh5co-sayings .flexslider .slides li blockquote {
+    padding-left: 0;
+    border-left: none;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-sayings .flexslider .slides li blockquote {
+      padding: 0 20px;
+    }
+  }
+  #fh5co-sayings .flexslider .slides li blockquote p {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-sayings .flexslider .slides li blockquote p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+  #fh5co-sayings .flexslider .slides li blockquote p.quote-author {
+    font-size: 20px;
+    color: gray;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-sayings .flexslider .slides li blockquote p.quote-author {
+      font-size: 18px;
+    }
+  }
+  #fh5co-sayings .flexslider .flex-control-paging {
+    position: relative;
+  }
+  #fh5co-sayings .flexslider .flex-control-paging.flex-control-nav {
+    bottom: -70px;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-sayings .flexslider .flex-control-paging.flex-control-nav {
+      bottom: -60px;
+    }
+  }
+  #fh5co-sayings .flexslider .flex-control-paging li a {
+    width: 14px;
+    height: 14px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+  }
+  #fh5co-sayings .flexslider .flex-control-paging li a:active, #fh5co-sayings .flexslider .flex-control-paging li a:focus {
+    outline: none;
+  }
+  #fh5co-sayings .flexslider .flex-control-paging li a.flex-active {
+    top: 2px;
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid #fb6e14;
+  }
+  #fh5co-events > .fh5co-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+  }
+  #fh5co-type > .fh5co-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #fh5co-about .fh5co-text {
+      padding: 1em;
+    }
+  }
+  #fh5co-about .fh5co-text .btn {
+    color: #fff;
+  }
+  #fh5co-about .fh5co-text .heading {
+    margin-bottom: 30px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  #fh5co-about .fh5co-text .heading:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    left: 50%;
+    background: #fb6e14;
+    margin-left: -20px;
+  }
+  #fh5co-about .fh5co-text p {
+    line-height: 2;
+    color: #a99c92;
+  }
+  #fh5co-about .fh5co-text p span.firstcharacter {
+    float: left;
+    color: #903;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 10px;
+    padding-left: 3px;
+    font-style: italic;
+    top: -20px;
+    position: relative;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+  }
+  #fh5co-featured .fh5co-grid > .fh5co-v-half .fh5co-text {
+    background: #f5f5f5;
+  }
+  #fh5co-events > .container {
+    z-index: 10;
+    position: relative;
+  }
+  #fh5co-type > .container {
+    z-index: 10;
+    position: relative;
+  }
+  .js .to-animate, .js
+.to-animate-2 {
+  opacity: 0;
+}
+row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}

@@ -87,7 +87,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   border: 0;
-  box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
 }
 @media (max-width: 480px) {
   .dropdown-menu {
@@ -169,7 +168,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
   overflow: hidden;
   display: flex;
 }
@@ -258,13 +256,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #8b0246/*#392F5A*/;
   margin-bottom: 15px;
   color: #fff;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.623);
 }
 .linija{
   margin: 15px 0;
   height: 10px;
   background: #8b0246/*#392F5A*/;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.623);
 }
 .blok h1{
   color: #ac1460;
@@ -683,8 +679,11 @@ transition: transform 0.3s ease;
   align-items: center;
   text-align: center;
   overflow-wrap: break-word;
+  overflow-y: auto;
+  overflow-x: hidden;
   width:240px;
   height:250px;
+  scrollbar-width: thin;
 }
 
 #RecipeInfoPad{
@@ -738,6 +737,7 @@ transition: transform 0.3s ease;
   color: var(--WhiteMain);
   height: 1500px;
   overflow: auto;
+  scrollbar-width: thin;
 }
 
 .formImportant{
@@ -831,6 +831,7 @@ transition: transform 0.3s ease;
   overflow-wrap: break-word;
   overflow-y: auto;
   max-height: 600px;
+  scrollbar-width: thin;
 }
 #drustvene_mreze{
   margin-left: 10px;

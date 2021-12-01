@@ -17,19 +17,23 @@ function putData(post)
     var src=`
         <div class="prostor">
             <div class="slika"><img src="${post.slika}"></div>
-        </div>
+        </div> 
+        <div class="linija"></div>
         <div class="sastojci">
-        <h4 class="opis">VREME PRIPREME: ${post.vremeSpremanja} minuta</h4><br>
-        <h1 class="opis">POTREBNI SASTOJCI:</h1><br>
-        <p class="recept">
+        <h1 class="opisBitnoTop">VREME PRIPREME: ${post.vremeSpremanja} minuta</h1><br>
+        <h1 class="opisBitno">POTREBNI SASTOJCI:</h1><br>
+        <p class="opisBitno">
             ${txt}
         </p>
-        </li><br><br>
-        <h1 class="priprema"><b>NAČIN PRIPREME</b></h1><br>
-        <p class="recept">
+        </li><br>
+        <h1 class="opisBitno"><b>NAČIN PRIPREME:</b></h1>
+        <p class="opisBitno">
             ${post.recept}
         </p>
+        <button class="print-button" onClick = window.print();>Print</button>
         <button class="delete-button" id="${ID}" onClick = "obrisi(this.id)">🗑️</button>
+        <br>
+        <br>
         </div>
     `;
 

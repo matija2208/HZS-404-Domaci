@@ -6,47 +6,85 @@
   }
 .pozadina{
     width: 100;
-    background-color: var(--PurpleMain);
-    border: 5px solid white ;
-    border-radius: 30px;
+
+    color: #fff;
+    border-radius: 0px 25px 25px 0px;
     margin-top: 60px;
 }
 .slika{
-    margin: 20px;
-    height: 400px;
-
-     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-
+    padding-top: 75px;
+    padding-bottom: 75px;
+    height: 600px;
+    background: var(--PurpleMain)/*#392F5A*/;
+    border-radius: 0px 250px 0px 0px;
+    display: flex;
+    justify-content: center;
+    
 }
 .prostor{
     display: initial;
 }
+
+.opisBitnoTop{
+    font-family: "Nunito", sans-serif;
+    color: white;
+    width: 80%;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 5%;
+    padding-top: 5%;
+}
+
+.opisBitno{
+    font-family: "Nunito", sans-serif;
+    color: white;
+    width: 80%;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 5%;
+}
+
 .opis{
+    font-family: "Nunito", sans-serif;
     color: white;
     width: 80%;
 
 }
 .sastojci{
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    background: var(--PurpleMain)/*#392F5A*/;
+    border-radius: 0px 0px 250px 0px;
 }
 .lista_sastojaka{
+    font-family: "Nunito", sans-serif;
     color: white;
     font-size: 20px;
 }
 .recept{
+    font-family: "Nunito", sans-serif;
     text-align: center;
     color: white;
     font-size: 20px;
 }
 .priprema{
+    font-family: "Nunito", sans-serif;
     color: white;
     width: 80%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.delete-button{
+    display: inline-block;
+    
+    color: var(--PurpleMain)
+}
+
+.print-button{
+    display: inline-block;
+    margin-left: 80%;
+    color: var(--PurpleMain)
 }

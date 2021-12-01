@@ -85,6 +85,6 @@
 
 .print-button{
     display: inline-block;
-    margin-left: 80%;
+    margin-left: 5%;
     color: var(--PurpleMain)
 }

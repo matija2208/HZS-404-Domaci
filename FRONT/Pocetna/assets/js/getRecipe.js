@@ -42,10 +42,13 @@ function putData(post)
 }
 
 async function GetData() {
+    var id = "http://localhost:3000/api/posts/"+location.search.substring(1);
+    console.log(id);
     try {
-        var pOSTS = await axios.get("http://localhost:3000/api/posts/"+ID);
-        console.log(pOSTS.data.posts[0]);
-        putData(pOSTS.data.posts[0]);
+        
+        var pOSTS = await axios.get(id);
+        console.log(pOSTS.data.post);
+        putData(pOSTS.data.post);
     }catch (err) {
         console.log(err);
     }

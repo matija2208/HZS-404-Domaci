@@ -1,0 +1,1 @@
+password za brisanje postova : JOSHUA

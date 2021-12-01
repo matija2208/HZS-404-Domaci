@@ -5,7 +5,6 @@ function validiraj(){
     everything_filled();
     valid_name();
     valid_tags();
-    valid_link();
 
    if(valid_test == true){
       objavi_post();
@@ -35,12 +34,7 @@ function validiraj(){
         valid_test = false;
         document.getElementById("EmptyTimeWarning").classList.remove("d-none");
       } else document.getElementById("EmptyTimeWarning").classList.add("d-none");
-
-      if(entries.link_jela_input.value.length == 0){
-        valid_test = false;
-        document.getElementById("EmptyLinkWarning").classList.remove("d-none");
-      } else document.getElementById("EmptyLinkWarning").classList.add("d-none");
-
+      
       if(entries.tagovi_jela_input.value.length == 0){
         valid_test = false;
         document.getElementById("EmptyTagsWarning").classList.remove("d-none");
@@ -75,21 +69,6 @@ function validiraj(){
       document.getElementById("TagWarning").classList.add("d-none");
     }
   }
-
-  function valid_link(){
-    var pattern = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
-    var tekst = document.getElementById("forma").link_jela_input.value;
-    var test = tekst.match(pattern);
-
-    if (test == null) {
-        document.getElementById("LinkWarning").classList.remove("d-none");
-        valid_test = false;
-    } else{
-      console.log("validirani tagovi recepta...");
-      document.getElementById("LinkWarning").classList.add("d-none");
-    }
-  }
-  
   /*Upload.js*/
   var link;
 

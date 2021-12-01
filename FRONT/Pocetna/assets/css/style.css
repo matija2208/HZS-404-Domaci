@@ -538,7 +538,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0;
   font-size: 14px;
   transition: all 0.3s;
-  border-top: 1px solid #8b0246;
   margin-top: 100px;
 }
 
@@ -563,19 +562,23 @@ margin: 0px 0px 100px 15px;
 height: 350px;
 width: 300px;
 } 
+/*
 .objave{
   margin-top: 40px;
   display: inline-flex;
  
   position: relative;
 }
+*/
 .cards {
 display: flex;
 flex-wrap: wrap;
-/*justify-content: space-evenly;*/
+justify-content: space-evenly;
 padding: 5px;
 height: 420px;
 
+/*
+WARNING !!! NE ODKOMENTARISI ILI CES UMRETI !!! WARNING
 flex: 0 0 240px;
 justify-content: center;
 align-items: center;
@@ -583,6 +586,8 @@ flex-direction: column;
 
 position: relative;
 text-align: center;
+WARNING !!! NE ODKOMENTARISI ILI CES UMRETI !!! WARNING
+*/
 }
 
 .card-container {
@@ -732,7 +737,7 @@ transition: transform 0.3s ease;
   background: var(--PurpleMain)/*#392F5A*/;
   color: var(--WhiteMain);
   height: 1500px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .formImportant{

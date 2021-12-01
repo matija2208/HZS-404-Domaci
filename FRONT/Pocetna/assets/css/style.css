@@ -810,15 +810,12 @@ transition: transform 0.3s ease;
   border: none;
   height: 69%;
   width: 40%;
-
   background-color:var(--PurpleFaint) ;
   color:var(--PurpleMain);
   font-family: "Nunito", sans-serif;
-  font-size: 50px;
+  font-size: 130%;
   outline: none;
-
   margin: 0 auto;
-
   transition: all 0.25s ease;
 }
 

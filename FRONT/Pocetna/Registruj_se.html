@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOD 404! - Login</title>
+    <title>FOOD 404! - Register</title>
     <link rel="stylesheet" href=".//assets/css/Log-style.css">
+    <link rel="stylesheet" href=".//assets/css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
     <div class="log-box">
         <div class='signup'>
-            <br>
+          <br>
           <img src="../Pocetna/assets/img/404foodlogoWhite.png" width="30%" height="30%">
           <h1 class="sing_h1">REGISTRUJ SE</h1><br>
            <form id="forma">
              <!-- IME-->
             <input type='text' id="ime_input" placeholder='Korisničko ime:'  />
-            <p class="regex_error hidden" id="ime_error">Ime sme sadrzati samo slova.</p>
-
+            <span class="RegexWarning hidden" id="EmptyNameWarning"> Molimo vas da unesete korisnicko ime.</span> <br>
+            <span class="RegexWarning hidden" id="ErrorNameWarning"> Ime sme sadrzati samo slova, brojeve i moze biti do 30 karaktera dugacko, bez razmaka.</span> <br>
+            <span class="RegexWarning hidden" id="SameNameWarning"> Ovo korisnicko ime je vec zauzeto.</span>
+            <br><br><br>
             <!-- MAIL-->
             <input type='text' id="mail_input" placeholder='Email:'  />
-            <p class="regex_error hidden" id="mail_error">E-Mail adresa mora sadrzati validnu adresu (example@[mail].com)</p>
-
+            <span class="RegexWarning hidden" id="EmptyMailWarning"> Molimo vas da unesete e-mail adresu.</span> <br>
+            <span class="RegexWarning hidden" id="ErrorMailWarning"> Molimo vas da unesete vazecu e-mail adresu (npr. [name]@example.com).</span> <br>
+            <span class="RegexWarning hidden" id="SameMailWarning"> Ova e-mail adresa je vec zauzeta.</span>
+            <br><br><br>
             <!-- PASS-->
             <input type='password' id="pass_input" placeholder='Lozinka:'  />
-            <p class="regex_error hidden" id="pass_error">Lozinka mora sadrzati vise od 6 slova i mora sadrzati barem jedan broj i jedno slovo.</p>
-
+            <span class="RegexWarning hidden" id="EmptyPassWarning"> Molimo vas da unesete lozinku vaseg naloga.</span> <br>
+            <span class="RegexWarning hidden" id="ErrorPassWarning"> Lozinka mora sadrzati najmanje 8 karaktera i jedan broj, bez simbola.</span>
+            <br><br><br>
             <input type='password' id="pass_repeat" placeholder='Potvrdi lozinku:'  />
-            <p class="regex_error hidden" id="pass_repeat_error">Lozinke nisu iste.</p>
+            <span class="RegexWarning hidden" id="EmptyRepeatWarning"> Molimo vas da ponovite lozinku.</span> <br>
+            <span class="RegexWarning hidden" id="ErrorRepeatWarning"> Lozinke nisu iste.</span>
+            <br><br><br>
 
-
-            <input class="dugme" type='button' value="REGISTRUJ SE" id="dodajobjavu" onclick="validiraj()" /><br><br><br>
+            <input class="dugme" type='button' value="REGISTRUJ SE" id="registracija" onclick="ValidirajRegister()" /><br><br><br>
             <a href="Login.html" class="dugme1">PRIJAVI SE</a><br><br><br><br>
             <a href="Pocetna.html" id="dugmenazad"><i class="fas fa-reply"></i> NAZAD</a><br><br><br>
            </form>
@@ -40,6 +47,6 @@
 
       <!--SCRIPT IMPORT-->
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <script src="Registrujse.js"></script>
+      <script src="assets/js/LogInRegister.js"></script>
 </body>
 </html>

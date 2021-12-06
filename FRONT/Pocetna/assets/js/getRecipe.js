@@ -31,6 +31,8 @@ function putData(post)
             ${post.recept}
         </p>
         <button class="print-button" onClick = window.print();>Print</button>
+        "GoToRecipe(this.id)"
+        <button class="delete-button" id="${ID}" onclick = "GoToUpdate(this.id)">Update</button>
         <button class="delete-button" id="${ID}" onClick = "obrisi(this.id)">🗑️</button>
         <br>
         <br>

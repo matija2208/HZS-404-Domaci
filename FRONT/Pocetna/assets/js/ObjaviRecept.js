@@ -164,10 +164,9 @@ async function objavi_post(){
   try{
     var x = await axios.post("http://localhost:3000/api/posts",newPost);
     console.log(x);
+    window.location.href = "Pocetna.html";
   }
   catch(err){
     console.log(err);
   }
-  alert("Post vam je uspesno objavljen.");
-  window.location.href = "Pocetna.html";
 }

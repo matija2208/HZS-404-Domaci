@@ -130,16 +130,15 @@ async function ValidirajRegister(){
                 t=false;
             }
         });
-        if(t)
-        {
-            registruj(entries);
+        if(t){
+            await registruj(entries);
             location.href="Pocetna.html";
+        }else{
+            document.getElementById("SameMailWarning").classList.remove("hidden");
         }
-        else
-        {
-            //dodati poruku da uneti mail je vec iskoriscen na sajtu
-        }
-    } else{
+    } 
+    else
+    {
         console.log("Korisnik se ne registruje");
     }
 }
@@ -194,7 +193,7 @@ async function Provera()
     }
     else
     {
-        //dodati poruku da je omasen mail ili password
+        document.getElementById("LoginError").classList.remove("hidden") //dodati poruku da je omasen mail ili password
         console.log(0);
     }
 }

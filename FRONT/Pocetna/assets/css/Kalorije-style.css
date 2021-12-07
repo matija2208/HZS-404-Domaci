@@ -28,7 +28,7 @@ body{
     color: white;
     margin-top: 0px;
 }
-[type=text]{
+[type=number]{
     display: block;
     margin: 0 auto;
     width: 80%;
@@ -141,6 +141,7 @@ body{
   border: 5px dashed white;
   width: 200px;
   height: 100px;
+  overflow:hidden;
   background-color: var(--PurpleMain);
   color: white;
   font-size: 50px;

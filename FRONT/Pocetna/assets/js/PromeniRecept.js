@@ -176,12 +176,11 @@ async function objavi_post(){
   try{
     var x = await axios.put("http://localhost:3000/api/posts/"+id,newPost);
     console.log(x);
+    window.location.href = "Recepti.html";  
   }
   catch(err){
     console.log(err);
-  }
-  alert("Post vam je uspesno objavljen.");
-  window.location.href = "Recepti.html";
+  } 
 }
 
 //NEW SHIT VVVVV

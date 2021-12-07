@@ -168,6 +168,11 @@ function getCookie(cname) {
 
 async function Provera()
 {
+
+    setCookie("username", 13956, 365);
+    let x=getCookie("username");
+    console.log(x);
+
     var entries = document.getElementById("formaLogin");
     var email=entries.mail.value;
     var password=entries.lozinka.value;

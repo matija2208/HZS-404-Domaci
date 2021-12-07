@@ -660,7 +660,8 @@ transition: transform 0.3s ease;
 #CardLower{
   background-color: var(--PurpleMain);
   border-radius: 0px 0px 25px 0px;
-  height: 40px;
+  min-height: 40px;
+  height: fit-content;
 }
 
 #RecipeInfo{

@@ -1,13 +1,3 @@
-var ID="";
-var POSTS=[Object];
-
-function takeID(){
-    var ID = location.search.substring(1);
-    console.log("query:" + ID);
-}
-
-window.onload =  takeID();
-
 function putData(post)
 {
     const cardsDiv = document.querySelector(".pozadina");
@@ -31,9 +21,8 @@ function putData(post)
             ${post.recept}
         </p>
         <button class="print-button" onClick = window.print();>Print</button>
-        "GoToRecipe(this.id)"
-        <button class="delete-button" id="${ID}" onclick = "GoToUpdate(this.id)">Update</button>
-        <button class="delete-button" id="${ID}" onClick = "obrisi(this.id)">🗑️</button>
+        <button class="delete-button" id="${location.search.substring(1)}" onclick = "GoToUpdate(this.id)">Update</button>
+        <button class="delete-button" onClick = "obrisi()">🗑️</button>
         <br>
         <br>
         </div>

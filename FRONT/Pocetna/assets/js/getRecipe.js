@@ -7,6 +7,7 @@ function putData(post)
     var src=`
         <div class="prostor">
             <div class="slika"><img src="${post.slika}"></div>
+            <h1 class = "opisBitnoTop">${post.imeJela}</h1>
         </div> 
         <div class="linija"></div>
         <div class="sastojci">
@@ -21,8 +22,8 @@ function putData(post)
             ${post.recept}
         </p>
         <button class="print-button" onClick = window.print();>Print</button>
-        <button class="delete-button" id="${location.search.substring(1)}" onclick = "GoToUpdate(this.id)">Update</button>
-        <button class="delete-button" onClick = "obrisi()">🗑️</button>
+        <button name="hidden_buttons" class="delete-button hidden" id="${location.search.substring(1)}" onclick = "GoToUpdate(this.id)">Update</button>
+        <button name="hidden_buttons" class="delete-button hidden" onClick = "obrisi()">🗑️</button>
         <br>
         <br>
         </div>
@@ -64,5 +65,16 @@ async function obrisi()
     }
 }
 
-GetData();
+function showButtons(){
+    var idname = "id";
+    var loginId = localStorage.getItem(idname);
+    if(loginId!=null){
+      var buttons = document.getElementsByName("hidden_buttons");
+      buttons.forEach(elm => {
+          elm.classList.remove("hidden");
+      });
+    }
+  }
 
+GetData();
+showButtons();

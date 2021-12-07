@@ -349,7 +349,7 @@ async function izmenanava()
                   </a>
                 </li>
                 <li class="nav-item"id="nav-item">
-                    <span>${username}</span>
+                    <span id="nav_user">${username}</span>
                   </a>
                 </li>
                 <button onclick = "odjaviSe()" >ODJAVI SE</button>`;

@@ -871,3 +871,26 @@ transition: transform 0.3s ease;
 #aaaaa{
   padding-left: 8px;
 }
+
+#prijavi_regist{
+  font-size: 24px;
+  padding: 20px;
+}
+#prijavi_regist #nav_user{
+  padding: 40px;
+}
+#prijavi_regist button{
+  color: #8b0246;
+  border: 0px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 10px;
+  transition: 0.1s linear;
+  height: 30px;
+  margin-left: 60px;
+}
+#prijavi_regist button:hover{
+  background-color: #8b0246;
+  color: white;
+}

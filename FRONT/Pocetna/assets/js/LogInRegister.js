@@ -76,15 +76,43 @@ function regex_valid_repeat(entries){
     }
 }
 
-function registruj(entries){
+async function registruj(entries){
     var korisnicko_ime = entries.ime_input.value;
     var e_mail_korisnika = entries.mail_input.value;
     var lozinka_korisnika = entries.pass_input.value;
 
-    console.log(korisnicko_ime, e_mail_korisnika, lozinka_korisnika);
+    var newUser={
+        userName:korisnicko_ime,
+        email:e_mail_korisnika,
+        password:lozinka_korisnika
+    };
+
+    try
+    {
+        var res=await axios.post("http://localhost:3000/api/users",newUser);
+        //console.log(res);
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
 }
 
-function ValidirajRegister(){
+async function getData()
+{
+    try
+    {
+        var users=await axios.get("http://localhost:3000/api/users");
+        return users.data.users;
+    }
+    catch(err)
+    {
+        console.log(err);
+        return null;
+    }
+}
+
+async function ValidirajRegister(){
     valid_test = true;
     var entries = document.getElementById("forma");
     everything_filled(entries);
@@ -94,9 +122,79 @@ function ValidirajRegister(){
     regex_valid_repeat(entries);
 
     if(valid_test == true){
-        registruj(entries);
+        var users = await getData();
+        var t=true;
+        users.forEach(i => {
+            if(i.email===entries.mail_input.value)
+            {
+                t=false;
+            }
+        });
+        if(t)
+        {
+            registruj(entries);
+            location.href="Pocetna.html";
+        }
+        else
+        {
+            //dodati poruku da uneti mail je vec iskoriscen na sajtu
+        }
     } else{
         console.log("Korisnik se ne registruje");
     }
 }
 
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+async function Provera()
+{
+    var entries = document.getElementById("formaLogin");
+    var email=entries.mail.value;
+    var password=entries.lozinka.value;
+
+    var users=await getData();
+    var id="";
+    var t=false;
+
+    users.forEach(i => {
+        if(email===i.email && password===i.password)
+        {
+            id=i._id;
+            t=true;
+        }
+    });
+
+    if(t)//Ako prodje if znaci da je unet postojeci mail i password
+    {
+        //dodati pravljenje kolacica sa vrednoscu korisnikovog id-a
+        setCookie("username", id, 365);
+        let x=getCookie("username");
+        console.log(x);
+    }
+    else
+    {
+        //dodati poruku da je omasen mail ili password
+        console.log(0);
+    }
+}

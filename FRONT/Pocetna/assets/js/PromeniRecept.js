@@ -197,14 +197,19 @@ function putData(post){
   }
 
 }
-async function GetData(id) {
+
+async function GetData(id)
+{
   console.log(id);
-  try {
-      var pOSTS = await axios.get(id);
-      console.log(pOSTS.data.post);
-      putData(pOSTS.data.post);
-  }catch (err) {
-      console.log(err);
+  try 
+  {
+    var pOSTS = await axios.get(id);
+    console.log(pOSTS.data.post);
+    putData(pOSTS.data.post);
+  }
+  catch (err) 
+  {
+    console.log(err);
   }
 }
 

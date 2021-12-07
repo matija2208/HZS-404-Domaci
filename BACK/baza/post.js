@@ -47,6 +47,12 @@ const PostSchema=new mongoose.Schema({
     potrebniSastojci:[PotrebniSastojciSchema],
     tagovi:[{type:String,trim:true,required:true}],
 
+    idKorisnika:{
+        type:String,
+        trim:true,
+        required:true,
+    }
+
 });
 
 module.exports=mongoose.model("post", PostSchema);

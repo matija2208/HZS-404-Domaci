@@ -147,7 +147,7 @@ function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=Lax";
   }
 
 function getCookie(cname) {
@@ -169,7 +169,8 @@ function getCookie(cname) {
 async function Provera()
 {
 
-    setCookie("username", 13956, 365);
+    
+
     let x=getCookie("username");
     console.log(x);
 
@@ -192,13 +193,17 @@ async function Provera()
     if(t)//Ako prodje if znaci da je unet postojeci mail i password
     {
         //dodati pravljenje kolacica sa vrednoscu korisnikovog id-a
-        setCookie("username", id, 365);
-        let x=getCookie("username");
-        console.log(x);
+        document.getElementById("LoginError").classList.add("hidden");
+        if(localStorage.getItem("id")===null)
+        {
+            localStorage.setItem("id",id);
+            console.log(localStorage.getItem("id"));
+        }
+        location.href="Pocetna.html";
     }
     else
     {
-        document.getElementById("LoginError").classList.remove("hidden") //dodati poruku da je omasen mail ili password
+        document.getElementById("LoginError").classList.remove("hidden"); //dodati poruku da je omasen mail ili password
         console.log(0);
     }
 }

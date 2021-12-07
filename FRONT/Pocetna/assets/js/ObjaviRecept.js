@@ -6,8 +6,10 @@ function validiraj(){
     valid_name();
     valid_tags();
 
-   if(valid_test == true){
-      objavi_post();
+    var id=localStorage.getItem("id");
+    console.log(id);
+   if(valid_test == true && id!==null){
+      objavi_post(id);
     } else{
       console.log("Post se ne objavljuje");
     }
@@ -107,7 +109,7 @@ new Imgur({
 
 //Punjenje baze
 
-async function objavi_post(){
+async function objavi_post(id){
 
   var entries = document.getElementById("forma");
   var ime = entries.ime_jela_input.value;
@@ -156,7 +158,9 @@ async function objavi_post(){
     slika:link,
 
     potrebniSastojci:listaSastojaka,
-    tagovi:tagovi
+    tagovi:tagovi,
+
+    idKorisnika:id
   };
 
   console.log(newPost);
@@ -164,7 +168,7 @@ async function objavi_post(){
   try{
     var x = await axios.post("http://localhost:3000/api/posts",newPost);
     console.log(x);
-    window.location.href = "Pocetna.html";
+    window.location.href = "Recepti.html";
   }
   catch(err){
     console.log(err);

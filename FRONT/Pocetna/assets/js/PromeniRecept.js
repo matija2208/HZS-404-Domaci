@@ -7,8 +7,10 @@ function validiraj(){
   valid_name();
   valid_tags();
 
-  if(valid_test == true){
-    objavi_post();
+  var idKorisnika=localStorage.getItem("id");
+
+  if(valid_test == true && idKorisnika!==null){
+    objavi_post(idKorisnika);
   } else{
     console.log("Post se ne objavljuje");
   }
@@ -118,7 +120,7 @@ new Imgur({
 
 //Punjenje baze
 
-async function objavi_post(){
+async function objavi_post(idKorisnika){
 
   var entries = document.getElementById("forma");
   var ime = entries.ime_jela_input.value;
@@ -168,7 +170,9 @@ async function objavi_post(){
     slika:link,
 
     potrebniSastojci:listaSastojaka,
-    tagovi:tagovi
+    tagovi:tagovi,
+
+    idKorisnika:idKorisnika,
   };
 
   console.log(newPost);

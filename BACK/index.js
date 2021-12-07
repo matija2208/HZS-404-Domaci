@@ -64,7 +64,9 @@ app.use(cors());
 
                 potrebniSastojci:req.body.potrebniSastojci,
                 
-                tagovi:req.body.tagovi
+                tagovi:req.body.tagovi,
+
+                idKorisnika:req.body.idKorisnika
             });
 
             const savedPost=await newPost.save();
@@ -115,6 +117,8 @@ app.use(cors());
 
             newPost.potrebniSastojci=req.body.potrebniSastojci;
             newPost.tagovi=req.body.tagovi;
+            
+            newPost.idKorisnika=req.body.idKorisnika;
 
             const savedPost=await newPost.save();
             console.log("post edit pogodjen");

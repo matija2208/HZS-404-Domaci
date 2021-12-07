@@ -153,6 +153,22 @@ app.use(cors());
         }
     });
 
+    app.get("/api/users/:id", async function(req, res){
+        try{
+            const UserId = req.params.id;
+            const User = await user.findById(UserId);
+            res.json({
+                user:User
+            });
+        }
+        catch(err){
+            res.send({
+                uspesnost:false,
+                poruka:err.message
+            });
+        }
+    });
+
     app.post("/api/users/", async function(req,res){
         try{
 

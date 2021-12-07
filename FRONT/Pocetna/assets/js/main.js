@@ -317,3 +317,44 @@
   }
 
 })();
+
+async function getUsername(){
+  var id = localStorage.getItem("id");
+  if(id === null)
+  {
+      return "";
+  }
+  else
+  {
+    try{
+      var user = await axios.get("https://localhost:3000/api/users/" + id);
+      console.log(user);
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
+}
+
+async function izmenanava()
+{
+  var username = await getUsername();
+
+  if(username !== "")
+  {
+    var nav = document.getElementById("prijavi_regist");
+    var text = `<li class="nav-item"id="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>KORISNIK: </span>
+                  </a>
+                </li>
+                <li class="nav-item"id="nav-item">
+                    <span>${username}</span>
+                  </a>
+                </li>`;
+    nav.innerHTML = "";
+    nav.innerHTML = text;
+  }
+}
+
+izmenanava();

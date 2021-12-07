@@ -327,8 +327,8 @@ async function getUsername(){
   else
   {
     try{
-      var user = await axios.get("https://localhost:3000/api/users/" + id);
-      console.log(user);
+      var user = await axios.get("http://localhost:3000/api/users/" + id);
+      return user.data.user.userName;
     }
     catch(err){
       console.log(err);
@@ -351,10 +351,18 @@ async function izmenanava()
                 <li class="nav-item"id="nav-item">
                     <span>${username}</span>
                   </a>
-                </li>`;
+                </li>
+                <button onclick = "odjaviSe()" >ODJAVI SE</button>`;
     nav.innerHTML = "";
     nav.innerHTML = text;
   }
 }
 
+function odjaviSe()
+{
+  localStorage.removeItem("id");
+  location.reload();
+}
+
 izmenanava();
+

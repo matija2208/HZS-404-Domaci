@@ -4,6 +4,9 @@
     --WhiteMain:  #f7e4ed;
     --PurpleRecipeCard: white;
   }
+  *{
+    font-family: 'Electrolize', sans-serif;
+  }
 .pozadina{
     width: 100;
 
@@ -26,7 +29,6 @@
 }
 
 .opisBitnoTop{
-    font-family: "Nunito", sans-serif;
     color: white;
     width: 80%;
     text-align: left;
@@ -36,7 +38,6 @@
 }
 
 .opisBitno{
-    font-family: "Nunito", sans-serif;
     color: white;
     width: 80%;
     text-align: left;
@@ -45,7 +46,6 @@
 }
 
 .opis{
-    font-family: "Nunito", sans-serif;
     color: white;
     width: 80%;
 
@@ -58,18 +58,15 @@
     border-radius: 0px 0px 250px 0px;
 }
 .lista_sastojaka{
-    font-family: "Nunito", sans-serif;
     color: white;
     font-size: 20px;
 }
 .recept{
-    font-family: "Nunito", sans-serif;
     text-align: center;
     color: white;
     font-size: 20px;
 }
 .priprema{
-    font-family: "Nunito", sans-serif;
     color: white;
     width: 80%;
     text-align: center;
@@ -87,4 +84,13 @@
     display: inline-block;
     margin-left: 5%;
     color: var(--PurpleMain)
+}
+
+#user-name{
+    color: white;
+    width: 80%;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 5%;
+    padding-top: 5%;
 }

@@ -1,4 +1,4 @@
-function putData(post)
+async function putData(post)
 {
     const cardsDiv = document.querySelector(".pozadina");
     var txt="";
@@ -7,10 +7,11 @@ function putData(post)
     var src=`
         <div class="prostor">
             <div class="slika"><img src="${post.slika}"></div>
-            <h1 class = "opisBitnoTop">${post.imeJela}</h1>
         </div> 
         <div class="linija"></div>
         <div class="sastojci">
+        <h1 class = "opisBitnoTop">${post.imeJela}</h1>
+        <h2 id="user-name">Autor recepta: ${await GetUserData(post.idKorisnika)}</h2>
         <h1 class="opisBitnoTop">VREME PRIPREME: ${post.vremeSpremanja} minuta</h1><br>
         <h1 class="opisBitno">POTREBNI SASTOJCI:</h1><br>
         <p class="opisBitno">
@@ -41,6 +42,7 @@ async function GetData() {
         var pOSTS = await axios.get(id);
         console.log(pOSTS.data.post);
         putData(pOSTS.data.post);
+        showButtons(pOSTS.data.post);
     }catch (err) {
         console.log(err);
     }
@@ -65,10 +67,10 @@ async function obrisi()
     }
 }
 
-function showButtons(){
+function showButtons(post){
     var idname = "id";
     var loginId = localStorage.getItem(idname);
-    if(loginId!=null){
+    if(loginId!==null && loginId === post.idKorisnika){
       var buttons = document.getElementsByName("hidden_buttons");
       buttons.forEach(elm => {
           elm.classList.remove("hidden");
@@ -77,4 +79,14 @@ function showButtons(){
   }
 
 GetData();
-showButtons();
+
+async function GetUserData(id) {
+    var link = "http://localhost:3000/api/users/"+id;
+    console.log(id);
+    try {
+        var user = await axios.get(link);
+        return user.data.user.userName;
+    }catch (err) {
+        console.log(err);
+    }
+}

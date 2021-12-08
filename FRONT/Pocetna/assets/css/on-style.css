@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Comforter+Brush&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Comforter+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 :root{
   --PurpleMain: #8b0246;
@@ -15,9 +17,8 @@
 .onama-h1{
 text-align: center;
 color: white;
-font-size: 50px;/*
-font-family: 'Lobster', cursive;*/
-font-family: Montserrat,Georgia,serif;
+font-size: 50px;
+font-family: 'Electrolize', sans-serif;
 padding: 20px;
 background-color: var(--PurpleMain);
 border: 5px solid var(--PurpleMain);
@@ -28,6 +29,7 @@ border: 5px solid var(--PurpleMain);
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+font-family: 'Electrolize', sans-serif;
 }
 
 .div-kartice {
@@ -45,7 +47,7 @@ text-align: center;
 color: var(--PurpleRecipeCard);
 font-size: 35px;
 font-weight: 100;
-font-family: 'Aleo', serif;
+font-family: 'Electrolize', sans-serif;
 }
 
 .pozadi_ime{
@@ -189,7 +191,7 @@ z-index: 10;
 }
 
 .napred h1, .pozadi h1{
-font-family: 'zilla slab', sans-serif;
+font-family: 'Electrolize', sans-serif;
 padding: 30px;
 font-weight: bold;
 font-size: 24px;
@@ -197,7 +199,7 @@ text-align: center;
 }
 
 .napred p, .pozadi p{
-font-family: 'zilla slab', sans-serif;
+font-family: 'Electrolize', sans-serif;
 padding: 30px;
 font-weight: normal;
 font-size: 12px;
@@ -217,17 +219,11 @@ text-align: center;
   color: white/*#FFEBD6*/;
   font-size: 20px;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
-  /*font-family: 'Oswald', sans-serif;*/
-  font-family: 'Average', serif;
+  font-family: 'Electrolize', sans-serif;
 }
 
 .onama-ont{
-  /*font-family: 'Average', serif;
-  font-family: 'Playball', cursive;
-  font-family: 'Sail', cursive;*/
-  font-family: 'Cinzel Decorative', cursive;
-  /*font-family: 'Lobster', cursive;
-  font-family: 'Aleo', serif;*/
+  font-family: 'Electrolize', sans-serif;
   color: white/*#FFEBD6*/;
   text-align: center;
   font-size: 50px;

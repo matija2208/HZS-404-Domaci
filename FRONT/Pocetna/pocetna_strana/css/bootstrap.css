@@ -6,7 +6,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: 'Electrolize', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -308,11 +308,11 @@ th {
     border: 1px solid #ddd !important;
   }
 }
-@font-face {
+/*@font-face {
   font-family: 'Glyphicons Halflings';
   src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
   src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
-}
+}*/
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1393,7 +1393,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Electrolize', sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -1404,7 +1404,7 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family: 'Electrolize', sans-serif;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1492,7 +1492,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: inherit;
+  font-family: 'Electrolize', sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1877,7 +1877,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'Electrolize', sans-serif;
 }
 
 code {
@@ -6538,7 +6538,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Electrolize', sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6660,7 +6660,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Electrolize', sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6933,7 +6933,7 @@ button.close {
   width: 20px;
   height: 20px;
   line-height: 1;
-  font-family: serif;
+  font-family: 'Electrolize', sans-serif;
 }
 .carousel-control .icon-prev:before {
   content: '\2039';

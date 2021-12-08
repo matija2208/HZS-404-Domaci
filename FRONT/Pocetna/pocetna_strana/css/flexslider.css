@@ -12,7 +12,7 @@
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
-@font-face {
+/*@font-face {
   font-family: 'flexslider-icon';
   src: url('fonts/flexslider-icon.eot');
   src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
@@ -132,7 +132,7 @@ html[xmlns] .flexslider .slides {
   transition: all 0.3s ease-in-out;
 }
 .flex-direction-nav a:before {
-  font-family: "flexslider-icon";
+  font-family: 'Electrolize', sans-serif;
   font-size: 40px;
   display: inline-block;
   content: '\f001';
@@ -183,7 +183,7 @@ html[xmlns] .flexslider .slides {
   color: #000;
 }
 .flex-pauseplay a:before {
-  font-family: "flexslider-icon";
+  font-family: 'Electrolize', sans-serif;
   font-size: 20px;
   display: inline-block;
   content: '\f004';

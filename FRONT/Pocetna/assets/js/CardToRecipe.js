@@ -10,14 +10,14 @@ function GoToRecipe(id){
     location.href = destination + "?" + id;
 }
 
-function CreateCard(post) {
+async function CreateCard(post) {
     IDs.push(post._id);
     //console.log(IDs.length);
     //console.log(IDs[IDs.length-1]);
     POSTS.push(post);
 
     var txt="";
-    post.potrebniSastojci.forEach(i => txt+="-"+i.kolicinaSastojka+" "+i.imeSastojka+"<br>");
+    post.potrebniSastojci.forEach(i => txt+="- "+i.kolicinaSastojka+" "+i.imeSastojka+"<br>");
     
     //console.log(txt);
     var tez="";
@@ -59,8 +59,8 @@ function CreateCard(post) {
                         
         </div>
         <div id = "CardDifficulty" class = "CardAnimated">
+            <span class="DifficultyName">Autor recepta: ${await GetUserData(post.idKorisnika)}</span><br>
             ${tac}
-            <span class="DifficultyName">${tez}</span>
         </div>
     </div> 
 
@@ -68,7 +68,7 @@ function CreateCard(post) {
     return card;
 }
 
-function RenderPosts(posts, tag="") {
+async function RenderPosts(posts, tag="") {
     const cardsDiv = document.querySelector(".cards");
     let cards = "";
     Posts=[Object];
@@ -83,14 +83,14 @@ function RenderPosts(posts, tag="") {
     {
         if(tag==="")
         {
-            cards+=CreateCard(Posts[i])
+            cards+= await CreateCard(Posts[i])
         }
         else if(tag==="IZNENADI")
         {
             var index=Math.floor(Math.random()*counter);
             console.log(index);
 
-            cards+=CreateCard(Posts[index+1]);
+            cards+= await CreateCard(Posts[index+1]);
             break;
         }
         else
@@ -99,7 +99,7 @@ function RenderPosts(posts, tag="") {
             {
                 if(Posts[i].tagovi[j]===tag)
                 {
-                    cards+=CreateCard(Posts[i]);
+                    cards+= await CreateCard(Posts[i]);
                 }
             }
         }
@@ -113,6 +113,17 @@ async function GetData(tag="") {
         let posts = await axios.get("http://localhost:3000/api/posts");
         counter=0;
         RenderPosts(posts.data.posts, tag);
+    }catch (err) {
+        console.log(err);
+    }
+}
+
+async function GetUserData(id) {
+    var link = "http://localhost:3000/api/users/"+id;
+    console.log(id);
+    try {
+        var user = await axios.get(link);
+        return user.data.user.userName;
     }catch (err) {
         console.log(err);
     }

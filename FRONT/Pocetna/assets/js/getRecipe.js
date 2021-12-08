@@ -22,9 +22,11 @@ async function putData(post)
         <p class="opisBitno">
             ${post.recept}
         </p>
+        
         <button class="print-button" onClick = window.print();>Print</button>
-        <button name="hidden_buttons" class="delete-button hidden" id="${location.search.substring(1)}" onclick = "GoToUpdate(this.id)">Update</button>
-        <button name="hidden_buttons" class="delete-button hidden" onClick = "obrisi()">🗑️</button>
+        <button name="hidden_buttons" class="delete-button hidden" id="button1" onclick = "GoToUpdate('${location.search.substring(1)}')">Update</button>
+        <button name="hidden_buttons" class="delete-button hidden" id="button2" onClick = "obrisi()">🗑️</button>
+        
         <br>
         <br>
         </div>
@@ -36,12 +38,10 @@ async function putData(post)
 
 async function GetData() {
     var id = "http://localhost:3000/api/posts/"+location.search.substring(1);
-    console.log(id);
     try {
         
         var pOSTS = await axios.get(id);
-        console.log(pOSTS.data.post);
-        putData(pOSTS.data.post);
+        await putData(pOSTS.data.post);
         showButtons(pOSTS.data.post);
     }catch (err) {
         console.log(err);
@@ -55,7 +55,6 @@ async function obrisi()
     {
         var id = location.search.substring(1);
         let idstring="http://localhost:3000/api/posts/"+id;
-        console.log(idstring);
         try{
             await axios.delete(idstring);
             location.href="Recepti.html";
@@ -70,11 +69,12 @@ async function obrisi()
 function showButtons(post){
     var idname = "id";
     var loginId = localStorage.getItem(idname);
-    if(loginId!==null && loginId === post.idKorisnika){
-      var buttons = document.getElementsByName("hidden_buttons");
-      buttons.forEach(elm => {
-          elm.classList.remove("hidden");
-      });
+    if(loginId.trim() === post.idKorisnika.trim()){
+        const buttons = document.getElementsByName("hidden_buttons");
+
+        buttons.forEach(i=>{
+            i.classList.remove("hidden");
+        })
     }
   }
 
@@ -82,7 +82,6 @@ GetData();
 
 async function GetUserData(id) {
     var link = "http://localhost:3000/api/users/"+id;
-    console.log(id);
     try {
         var user = await axios.get(link);
         return user.data.user.userName;

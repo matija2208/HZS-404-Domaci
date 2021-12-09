@@ -173,7 +173,7 @@ async function objavi_post(id){
   try{
     var x = await axios.post("http://localhost:3000/api/posts",newPost);
     console.log(x);
-    //window.location.href = "Recepti.html";
+    window.location.href = "Recepti.html";
   }
   catch(err){
     console.log(err);

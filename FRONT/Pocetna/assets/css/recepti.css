@@ -23,6 +23,25 @@
     display: flex;
     justify-content: center;
     
+    
+}
+#slika{
+    border: 3px dashed white;
+    border-radius: 15%;
+    box-shadow: 5px 5px 30px black;
+}
+@media (max-width: 830px) {
+    .slika{
+        height: 400px;
+    }
+}
+@media (max-width: 555px) {
+    .slika{
+        height: 350px;
+    }
+    #slika{
+        transform: translateX(-30px);
+    }
 }
 .prostor{
     display: initial;
@@ -93,4 +112,9 @@
     vertical-align: middle;
     margin-left: 5%;
     padding-top: 5%;
+}
+
+#srce{
+    font-size:50px;
+    margin-left: 5%;
 }

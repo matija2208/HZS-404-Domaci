@@ -4,9 +4,17 @@ async function putData(post)
     var txt="";
     post.potrebniSastojci.forEach(i => txt+="- "+i.kolicinaSastojka+" "+i.imeSastojka+"<br>");
 
+    var idKorisnika = localStorage.getItem("id");
+    var srce = "far fa-heart";
+    post.lajkovi.forEach(i=>{
+        if(i === idKorisnika){
+            srce = "fas fa-heart";
+        }
+    });
+
     var src=`
         <div class="prostor">
-            <div class="slika"><img src="${post.slika}"></div>
+            <div class="slika"><img id="slika" src="${post.slika}"></div>
         </div> 
         <div class="linija"></div>
         <div class="sastojci">
@@ -22,7 +30,7 @@ async function putData(post)
         <p class="opisBitno">
             ${post.recept}
         </p>
-        <span onclick="updateLike('${location.search.substring(1)}')"><i class="fas fa-heart fa-3x"></i> ${post.brojLajkova}</span>
+        <span id="srce" onclick="updateLike('${location.search.substring(1)}')"><i class="${srce}"></i> ${post.brojLajkova}</span>
         <button class="print-button" onClick = window.print();>Print</button>
         <button name="hidden_buttons" class="delete-button hidden" id="button1" onclick = "GoToUpdate('${location.search.substring(1)}')">Update</button>
         <button name="hidden_buttons" class="delete-button hidden" id="button2" onClick = "obrisi()">🗑️</button>
@@ -50,19 +58,15 @@ async function GetData() {
 
 async function obrisi()
 {
-    var loz = prompt("Unesite lozinku za objavu : ");
-    if(loz==="JOSHUA")
+    var id = location.search.substring(1);
+    let idstring="http://localhost:3000/api/posts/"+id;
+    try{
+        await axios.delete(idstring);
+        location.href="Recepti.html";
+    }
+    catch(err)
     {
-        var id = location.search.substring(1);
-        let idstring="http://localhost:3000/api/posts/"+id;
-        try{
-            await axios.delete(idstring);
-            location.href="Recepti.html";
-        }
-        catch(err)
-        {
-            console.log(err);
-        }
+        console.log(err);
     }
 }
 

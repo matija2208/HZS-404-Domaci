@@ -55,7 +55,7 @@ async function CreateCard(post) {
             </div>
         </div>
         <div id="CardLower" class = "CardAnimated">
-            <span class="RecipeName">${post.imeJela}</span>
+            <span class="RecipeName">${post.imeJela}  &nbsp; &nbsp;<i class="fas fa-heart" id="srce"></i> ${post.brojLajkova}</span> 
                         
         </div>
         <div id = "CardDifficulty" class = "CardAnimated">

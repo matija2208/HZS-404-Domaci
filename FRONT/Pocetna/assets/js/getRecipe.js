@@ -2,7 +2,7 @@ async function putData(post)
 {
     const cardsDiv = document.querySelector(".pozadina");
     var txt="";
-    post.potrebniSastojci.forEach(i => txt+="-"+i.kolicinaSastojka+" "+i.imeSastojka+"<br>");
+    post.potrebniSastojci.forEach(i => txt+="- "+i.kolicinaSastojka+" "+i.imeSastojka+"<br>");
 
     var src=`
         <div class="prostor">
@@ -22,7 +22,7 @@ async function putData(post)
         <p class="opisBitno">
             ${post.recept}
         </p>
-        
+        <span onclick="updateLike('${location.search.substring(1)}')"><i class="fas fa-heart fa-3x"></i> ${post.brojLajkova}</span>
         <button class="print-button" onClick = window.print();>Print</button>
         <button name="hidden_buttons" class="delete-button hidden" id="button1" onclick = "GoToUpdate('${location.search.substring(1)}')">Update</button>
         <button name="hidden_buttons" class="delete-button hidden" id="button2" onClick = "obrisi()">🗑️</button>
@@ -88,4 +88,33 @@ async function GetUserData(id) {
     }catch (err) {
         console.log(err);
     }
+}
+
+async function updateLike(id){
+    var idKorisnika = localStorage.getItem("id");
+    if(idKorisnika !== null){
+        try{
+            var post = await axios.get("http://localhost:3000/api/posts/"+id);
+            var t = true;
+            post.data.post.lajkovi.forEach(function (i, j){
+                if(i === idKorisnika){
+                    post.data.post.brojLajkova--;
+                    post.data.post.lajkovi.splice(j, 1);
+                    t = false;
+                    console.log(j, i);
+
+                }
+            });
+            if(t){
+                post.data.post.brojLajkova++;
+                post.data.post.lajkovi.push(idKorisnika);
+            }
+            await axios.put("http://localhost:3000/api/posts/"+id, post.data.post);
+            GetData();
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+    
 }

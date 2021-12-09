@@ -160,6 +160,9 @@ async function objavi_post(idKorisnika){
       tezina = 1;
     break;
   }
+  var id = location.search.substring(1);
+
+  var post = await axios.get("http://localhost:3000/api/posts/"+id);
 
   var newPost={
     imeJela:ime,
@@ -173,10 +176,11 @@ async function objavi_post(idKorisnika){
     tagovi:tagovi,
 
     idKorisnika:idKorisnika,
+    brojLajkova: post.data.post.brojLajkova,
+    lajkovi: post.data.post.lajkovi,
   };
 
   console.log(newPost);
-  var id = location.search.substring(1);
   try{
     var x = await axios.put("http://localhost:3000/api/posts/"+id,newPost);
     console.log(x);

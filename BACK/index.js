@@ -66,7 +66,10 @@ app.use(cors());
                 
                 tagovi:req.body.tagovi,
 
-                idKorisnika:req.body.idKorisnika
+                idKorisnika:req.body.idKorisnika,
+
+                brojLajkova:req.body.brojLajkova,
+                lajkovi:req.body.lajkovi,
             });
 
             const savedPost=await newPost.save();
@@ -119,6 +122,9 @@ app.use(cors());
             newPost.tagovi=req.body.tagovi;
             
             newPost.idKorisnika=req.body.idKorisnika;
+
+            newPost.brojLajkova=req.body.brojLajkova;
+            newPost.lajkovi=req.body.lajkovi;
 
             const savedPost=await newPost.save();
             console.log("post edit pogodjen");

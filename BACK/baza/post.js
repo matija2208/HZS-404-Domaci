@@ -51,7 +51,18 @@ const PostSchema=new mongoose.Schema({
         type:String,
         trim:true,
         required:true,
-    }
+    },
+
+    brojLajkova:{
+        type:Number,
+        required:true,
+    },
+
+    lajkovi:[{
+        type:String,
+        trim:true,
+        required:true,
+    }],
 
 });
 

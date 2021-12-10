@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 :root{
     --PurpleMain: #8b0246;
     --PurpleFaint: #dda5c1;
@@ -26,8 +27,8 @@
     
 }
 #slika{
-    border: 3px dashed white;
-    border-radius: 15%;
+    border: 3px inset white;
+    border-radius: 10%;
     box-shadow: 5px 5px 30px black;
 }
 @media (max-width: 830px) {
@@ -54,6 +55,7 @@
     vertical-align: middle;
     margin-left: 5%;
     padding-top: 5%;
+    font-size: 60px;
 }
 
 .opisBitno{
@@ -62,6 +64,15 @@
     text-align: left;
     vertical-align: middle;
     margin-left: 5%;
+}
+
+#opisBitnoSastojci{
+    color: white;
+    width: 80%;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 5%;
+    font-size: 20px;
 }
 
 .opis{
@@ -95,7 +106,7 @@
 
 .delete-button{
     display: inline-block;
-    
+    margin-left: 10px;
     color: var(--PurpleMain)
 }
 
@@ -112,9 +123,37 @@
     vertical-align: middle;
     margin-left: 5%;
     padding-top: 5%;
+    margin-bottom: 10px;
 }
 
 #srce{
     font-size:50px;
     margin-left: 5%;
+}
+#srce .fa-heart:hover{
+    color: #c784a5;
+    cursor: pointer;
+}
+#srce .fa-heart:active{
+    color: #b35081;
+    cursor: pointer;
+}
+
+button{
+    border: 0px;
+    border-radius: 10px;
+    height: 50px;
+    transform: translateY(-10px);
+}
+button:hover{
+    background-color: #8b0246;
+    color: white;
+    transition: 0.3s ease-in-out;
+
+}
+#button2{
+    font-size: 20px;
+}
+#button2:active{
+    background-color: #ff0000;
 }

@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
 }
 #nav-link a{
-  font-weight: bolder;
+  font-weight: bold;
   color: #fff;
 }
 #nav-link a:hover, #nav-link a:focus {
@@ -668,7 +668,7 @@ transition: transform 0.3s ease;
 }
 
 #RecipeInfo{
-  background-color: var(--PurpleRecipeCard);
+  background-color: #fff2f8;
   width:100%;
   height:250px;
   z-index: -5;

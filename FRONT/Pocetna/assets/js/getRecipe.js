@@ -19,21 +19,21 @@ async function putData(post)
         <div class="linija"></div>
         <div class="sastojci">
         <h1 class = "opisBitnoTop">${post.imeJela}</h1>
-        <h2 id="user-name">Autor recepta: ${await GetUserData(post.idKorisnika)}</h2>
-        <h1 class="opisBitnoTop">VREME PRIPREME: ${post.vremeSpremanja} minuta</h1><br>
-        <h1 class="opisBitno">POTREBNI SASTOJCI:</h1><br>
-        <p class="opisBitno">
-            ${txt}
+        <h2 id="user-name"><i><u>Autor recepta: ${await GetUserData(post.idKorisnika)}</u></i></h2>
+        <h2 class="opisBitno"><b>VREME PRIPREME: ${post.vremeSpremanja} minuta</b></h2>
+        <h2 class="opisBitno"><b>POTREBNI SASTOJCI:</b></h2><br>
+        <p id="opisBitnoSastojci">
+            <i>${txt}</i>
         </p>
         </li><br>
         <h1 class="opisBitno"><b>NAČIN PRIPREME:</b></h1>
-        <p class="opisBitno">
+        <h3 class="opisBitno">
             ${post.recept}
-        </p>
+        </h3>
+        <button class="print-button" onClick = window.print();>Print <i class="fas fa-print"></i></button>
+        <button name="hidden_buttons" class="delete-button hidden" id="button1" onclick = "GoToUpdate('${location.search.substring(1)}')">Update <i class="fas fa-pencil-alt"></i> </button>
+        <button name="hidden_buttons" class="delete-button hidden" id="button2" onClick = "obrisi()">&nbsp;🗑️&nbsp;</button>
         <span id="srce" onclick="updateLike('${location.search.substring(1)}')"><i class="${srce}"></i> ${post.brojLajkova}</span>
-        <button class="print-button" onClick = window.print();>Print</button>
-        <button name="hidden_buttons" class="delete-button hidden" id="button1" onclick = "GoToUpdate('${location.search.substring(1)}')">Update</button>
-        <button name="hidden_buttons" class="delete-button hidden" id="button2" onClick = "obrisi()">🗑️</button>
         
         <br>
         <br>

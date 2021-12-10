@@ -37,7 +37,7 @@ function regex_valid_name(entries){
 }
 
 function regex_valid_mail(entries){
-    var pattern = /^[a-zA-Z0-9]+@[a-z]{2,10}\.[a-z]{2,4}$/;
+    var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     var tekst = entries.mail_input.value;
     var test = tekst.match(pattern);
 
@@ -51,7 +51,7 @@ function regex_valid_mail(entries){
 }
 
 function regex_valid_pass(entries){
-   var pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+   var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
    var tekst = entries.pass_input.value;
    var test = tekst.match(pattern);
 

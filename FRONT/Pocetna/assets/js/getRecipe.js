@@ -20,7 +20,7 @@ async function putData(post)
         <div class="sastojci">
         <h1 class = "opisBitnoTop">${post.imeJela}</h1>
         <h2 id="user-name"><i><u>Autor recepta: ${await GetUserData(post.idKorisnika)}</u></i></h2>
-        <h2 class="opisBitno"><b>VREME PRIPREME: ${post.vremeSpremanja} minuta</b></h2>
+        <h2 class="opisBitno"><b><i class="fas fa-stopwatch"></i> VREME PRIPREME: ${post.vremeSpremanja} minuta</b></h2>
         <h2 class="opisBitno"><b>POTREBNI SASTOJCI:</b></h2><br>
         <p id="opisBitnoSastojci">
             <i>${txt}</i>
